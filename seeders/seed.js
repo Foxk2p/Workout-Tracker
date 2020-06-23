@@ -145,3 +145,20 @@ db.Workout.deleteMany({})
     console.error(err);
     process.exit(1);
   });
+
+
+  // document for postman testing
+
+// {
+//   "day": "2020-06",
+//     "exercises": [
+//       {
+//         "type": "resistance",
+//         "name": "Bicep Curl",
+//         "duration": 20,
+//         "weight": 100,
+//         "reps": 10,
+//         "sets": 4
+//       }
+//     ]
+// }
