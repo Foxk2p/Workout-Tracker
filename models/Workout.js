@@ -40,7 +40,7 @@ const workoutSchema = new Schema({
 })
 
 userSchema.virtual('totalWeight').get(function () {
-  return this.items.reduce((t, exercise) => t + exercise.weight, 0)
+  return this.exercises.reduce((t, exercise) => t + exercise.weight, 0)
 })
 
 module.exports = model('Workout', workoutSchema)
