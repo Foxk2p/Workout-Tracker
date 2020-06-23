@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose')
 
 const workoutSchema = new Schema({
   day: {
-    type: String,
+    type: Date,
     required: true,
     lowercase: true
   },
