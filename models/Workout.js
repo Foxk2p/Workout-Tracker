@@ -43,7 +43,7 @@ const workoutSchema = new Schema({
   }
 })
 
-userSchema.virtual('totalWeight').get(function () {
+workoutSchema.virtual('totalWeight').get(function () {
   return this.exercises.reduce((t, exercise) => t + exercise.weight, 0)
 })
 

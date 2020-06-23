@@ -34,9 +34,9 @@ module.exports = router
 //     .catch(err => console.error(err))
 // })
 
-router.get('/workouts/:day', (req, res) => {
-  Workout.find({ day: req.params.day })
-    .then(workouts => res.json(workouts[0]))
-    .catch(err => console.error(err))
-})
+// router.get('/workouts/:day', (req, res) => {
+//   Workout.find({ day: req.params.day })
+//     .then(workouts => res.json(workouts[0]))
+//     .catch(err => console.error(err))
+// })
 
