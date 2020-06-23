@@ -1,15 +1,15 @@
 const router = require('express').Router()
 const { Workout } = require('../models')
 
-router.get('/workouts/:id', (req, res) => {
-  Workout.findById(req.params.id)
-    .then(workout => res.json(workout))
+router.get('/workouts', (req, res) => {
+  Workout.find()
+    .then(workouts => res.json(workouts))
     .catch(err => console.error(err))
 })
 
-router.get('/workouts/:day', (req, res) => {
-  Workout.find({ day: req.params.day })
-    .then(workouts => res.json(workouts[0]))
+router.get('/workouts/range', (req, res) => {
+  Workout.find()
+    .then(range => res.json(range))
     .catch(err => console.error(err))
 })
 
@@ -26,3 +26,17 @@ router.put('/workouts/:id', (req, res) => {
 })
 
 module.exports = router
+
+
+// router.get('/workouts/:id', (req, res) => {
+//   Workout.findById(req.params.id)
+//     .then(workout => res.json(workout))
+//     .catch(err => console.error(err))
+// })
+
+router.get('/workouts/:day', (req, res) => {
+  Workout.find({ day: req.params.day })
+    .then(workouts => res.json(workouts[0]))
+    .catch(err => console.error(err))
+})
+
