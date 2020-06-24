@@ -3,7 +3,7 @@ const { Workout } = require('../models')
 
 router.get('/workouts', (req, res) => {
   Workout.find()
-    .then(workouts => res.json(workouts))
+    .then(workout => res.json(workout))
     .catch(err => console.error(err))
 })
 
@@ -15,7 +15,7 @@ router.get('/workouts/range', (req, res) => {
 
 router.post('/workouts', (req, res) => {
   Workout.create(req.body)
-    .then(user => res.json(user))
+    .then(workout => res.json(workout))
     .catch(err => console.error(err))
 })
 

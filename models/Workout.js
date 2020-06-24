@@ -5,6 +5,7 @@ const workoutSchema = new Schema({
     type: Date,
     required: true,
     lowercase: true
+    // default: 
   },
   exercises: [{
     type: {
